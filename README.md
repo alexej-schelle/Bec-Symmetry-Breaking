@@ -17,11 +17,13 @@
    6. Total phases of the condensate wave field
    7. Chemical potentials of the condensate 
     
+    
    -1- : 
  
    License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren (2017) <br>
    License Type :      MIT license <br>
    License Contact:    E-Mail : alexej.schelle@gmail.com <br>
+
 
    -2- : 
 

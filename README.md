@@ -17,7 +17,22 @@
    6. Total phases of the condensate wave field
    7. Chemical potentials of the condensate 
     
-    
+   In order to start bec_symmytry_breaking.py, please specify BEC parameters :
+   
+   maxmode # typical mode size for analysis : 50 - 500 modes #
+   ptn = 2000 # typical particle number : 10^3 - 10^5 #
+   sample = 1000000 # Typical sample size : 10^5 - 10^8 #
+
+   omx = 2.0*math.pi*25.0 # trap frequency in x direction #
+   omy = 2.0*math.pi*75.0 # trap frequency in y direction # 
+   omz = 2.0*math.pi*125.0 # trap frequency in z direction #
+
+   start_temp = 10.0 # in units of nKin the source code #
+   
+   as required and run the simulation with python > bec_symmytry_breaking.py. 
+ 
+   The Source code is gratned with MIT LICENSE : 
+   
    -1- : 
  
    License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren <br>
@@ -39,4 +54,3 @@
    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
    In order to become sponsor of the project, you may simply apply for sponsorship at support@krealix.de. 
- 

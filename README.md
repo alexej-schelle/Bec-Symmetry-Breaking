@@ -31,7 +31,7 @@
    
    as required and run the simulation with python bec_symmytry_breaking.py with Python Version 3.7., or higher. <br><br>
  
-   The Source code is granted with MIT LICENSE : 
+   The source code is granted with MIT LICENSE (Copyright, 2017) : 
    
    -1- : 
  

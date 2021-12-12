@@ -27,18 +27,21 @@
    omy # trap frequency in y direction # <br>
    omz # trap frequency in z direction # <br>
 
-   start_temp # in units of nKin the source code # <br>
+   start_temp # in units of nK # <br>
    
-   as required and run the simulation with python bec_symmytry_breaking.py with Python Version 3.7., or higher. <br><br>
+   in the source code as required and run the simulation in the comand line with the command 
+   
+   >_ python bec_symmytry_breaking.py 
+   
+   using Python Version 3.7., or higher. <br><br>
  
    The source code is granted with MIT LICENSE (Copyright, 2017) : 
    
    -1- : 
  
    License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren <br>
-   License Type :      MIT license (2017) <br>
+   License Type :      MIT License (2017) <br>
    License Contact:    E-Mail : alexej.schelle@gmail.com <br>
-
 
    -2- : 
 

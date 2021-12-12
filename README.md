@@ -19,15 +19,15 @@
     
    In order to start bec_symmytry_breaking.py, please specify BEC parameters :
    
-   maxmode # typical mode size for analysis : 50 - 500 modes #
-   ptn # typical particle number : 10^3 - 10^5 #
-   sample # Typical sample size : 10^5 - 10^8 #
+   maxmode # typical mode size for analysis : 50 - 500 modes # <br>
+   ptn # typical particle number : 10^3 - 10^5 # <br>
+   sample # Typical sample size : 10^5 - 10^8 # <br>
 
-   omx # trap frequency in x direction #
-   omy # trap frequency in y direction # 
-   omz # trap frequency in z direction #
+   omx # trap frequency in x direction # <br>
+   omy # trap frequency in y direction # <br>
+   omz # trap frequency in z direction # <br>
 
-   start_temp = 10.0 # in units of nKin the source code #
+   start_temp = 10.0 # in units of nKin the source code # <br>
    
    as required and run the simulation with python > bec_symmytry_breaking.py. 
  

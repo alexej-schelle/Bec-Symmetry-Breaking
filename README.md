@@ -1,12 +1,11 @@
 
-   The routine bec-symmetry-breaking.py is Markov sampling method (generalised Metropolis-Hastings sampling algorithm) for calculating the
+   The routine bec-symmetry-breaking.py is a Markov sampling method, more specific, a generalised Metropolis-Hastings sampling algorithm for calculating the
    integrated (random) condensate wave field (order parameter) for a given total particle number, 
    temperature and trap frequency of a Bose-Einstein condensate.
 
    This software version corresponds to publication of Fluctuation and Noise Letters, Vol. 16, No. 01, 1750009 (2017).
   
    The Python routine bec_symmytry_breaking.py calculates :
-
 
    1. Condensate field modes   	    	            	    	            	    	        
    2. Condensate wave fields at equilibrium (symmetry aspects)    

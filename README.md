@@ -33,8 +33,8 @@
    
    > python bec_symmytry_breaking.py 
    
-   using Python Version 3.7., or higher. <br><br>
- 
+   using Python Version 3.7., or higher. <br>
+
    The source code is granted with MIT LICENSE (Copyright, 2017) : 
    
    -1- : 

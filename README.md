@@ -7,6 +7,7 @@
   
    The Python routine bec_symmytry_breaking.py calculates :
 
+
    1. Condensate field modes   	    	            	    	            	    	        
    2. Condensate wave fields at equilibrium (symmetry aspects)    
    3. Condensate wave field propagations (from low energy to high energy)    

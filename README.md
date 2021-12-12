@@ -14,4 +14,4 @@
 #   5. Partial phase distributions of imaginary valued field modes    
 #   6. Total phases of the condensate wave field
 #   7. Chemical potentials of the condensate 
-#
+# 

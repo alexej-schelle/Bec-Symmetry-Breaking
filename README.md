@@ -23,7 +23,7 @@
    License Type :      MIT license <br>
    License Contact:    E-Mail : alexej.schelle@gmail.com <br>
 
-   License Copyright Years : 2017 - 2022 
+   License Copyright Years : from 2017
 
    -2- : 
 

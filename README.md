@@ -29,7 +29,7 @@
 
    start_temp = 10.0 # in units of nKin the source code # <br>
    
-   as required and run the simulation with python > bec_symmytry_breaking.py. 
+   as required and run the simulation with python > bec_symmytry_breaking.py with Python Version 3.7. <br><br>
  
    The Source code is gratned with MIT LICENSE : 
    

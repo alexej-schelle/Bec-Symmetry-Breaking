@@ -31,7 +31,7 @@
    
    in the source code as required and run the simulation in the comand line with the command 
    
-   >_ python bec_symmytry_breaking.py 
+   > python bec_symmytry_breaking.py 
    
    using Python Version 3.7., or higher. <br><br>
  

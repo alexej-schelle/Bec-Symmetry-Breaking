@@ -16,13 +16,15 @@
    5. Partial phase distributions of imaginary valued field modes    
    6. Total phases of the condensate wave field
    7. Chemical potentials of the condensate 
-   
+    
    * : 
  
    License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren (Neugablonz) <br>
    License Type :      MIT license <br>
    License Contact:    E-Mail : alexej.schelle@gmail.com <br>
-  
+
+   License Copyright Years : 2017 - 2022 
+
    ** : 
 
    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 

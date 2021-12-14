@@ -29,7 +29,7 @@
 
    start_temp # in units of nK # <br>
    
-   in the source code as required and run the simulation in the comand line with the command 
+   in the source code as required and run the simulation in the command line with the command 
    
    > python bec_symmytry_breaking.py 
    

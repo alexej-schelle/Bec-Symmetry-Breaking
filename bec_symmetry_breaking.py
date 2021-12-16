@@ -30,10 +30,9 @@
 #
 #  * :
 # 
-#   License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren (Neugablonz)
-#   License Type :      MIT license
+#   License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren 
+#   License Type :      MIT license (2017)
 #   License Contact:    E-Mail : alexej.schelle@gmail.com
-#  
 # 
 #   ** : 
 #
@@ -66,7 +65,7 @@ import operator
 
 maxmode = 100 # Typical mode size for analysis : 50 - 500 modes.
 ptn = 2000 # Typical particle number : 10^3 - 10^5
-sample = 1000000 # Typical sample size : 10^5 - 10^8
+sample = 100000 # Typical sample size : 10^5 - 10^8
 
 omx = 2.0*math.pi*25.0 # Trap frequency in x direction
 omy = 2.0*math.pi*75.0 # Trap frequency in y direction 
@@ -145,7 +144,7 @@ for l in range(1, sample):
     p = ['']*maxmode
     phase_0 = 0.0
    
-    x = numpy.roots(pols) # Complex roots of the number conserving equation
+     x = numpy.roots(pols) # Complex roots of the number conserving equation
     
     for k in range(0,len(x)):
 
@@ -237,14 +236,14 @@ for l in range(1, sample):
 
 # Plot condensate field modes   	    	            	    	            	    	        
 
-plt.figure(51)
-plt.hist2d(mu_x_collect, mu_y_collect, bins = 500, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
-plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
-cbar = plt.colorbar()
-cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
-plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_field_modes.png')
+#plt.figure(51)
+#plt.hist2d(mu_x_collect, mu_y_collect, bins = 500, normed = True)
+#plt.tick_params(axis='both', which='major', labelsize = 16)
+#plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
+#plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
+#cbar = plt.colorbar()
+#cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
+#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_field_modes.png')
 
 
 # Plot condensate wave field at equilibrium    
@@ -258,61 +257,60 @@ cbar = plt.colorbar()
 cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
 plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_field_thermal.png')
 
-
 # Plot non-condensate wave field propagation    
 
-plt.figure(53)
-plt.hist2d(mu_x_prop_collect, mu_y_prop_collect, bins = 500, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
-plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
-cbar = plt.colorbar()
-cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
-plt.savefig('/your-installation-path/fig_field_propagation.png')
+#plt.figure(53)
+#plt.hist2d(mu_x_prop_collect, mu_y_prop_collect, bins = 500, normed = True)
+#plt.tick_params(axis='both', which='major', labelsize = 16)
+#plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
+#plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
+#cbar = plt.colorbar()
+#cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
+#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_field_propagation.png')
 
 
 # Plot phase distribution    
 
-plt.figure(54)
-plt.hist(mu_x, bins = 300, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
-plt.ylabel('$\pi_e[Re(\Psi_0)]$', fontsize = 18)
-plt.xlim([-1.00, 1.00])
-plt.savefig('/your-installation-path/fig_distribution_real.png')
+#plt.figure(54)
+#plt.hist(mu_x, bins = 300, normed = True)
+#plt.tick_params(axis='both', which='major', labelsize = 16)
+#plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
+#plt.ylabel('$\pi_e[Re(\Psi_0)]$', fontsize = 18)
+#plt.xlim([-1.00, 1.00])
+#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_distribution_real.png')
 
 
 # Plot phase distribution    
 
-plt.figure(55)
-plt.hist(mu_y, bins = 300, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$Im(\Psi_0)$', fontsize = 18)
-plt.ylabel('$\pi_e[Im(\Psi_0)]$', fontsize = 18)
-plt.xlim([-1.00, 1.00])
-plt.savefig('/your-installation-path/fig_distribution_imag.png')
+#plt.figure(55)
+#plt.hist(mu_y, bins = 300, normed = True)
+#plt.tick_params(axis='both', which='major', labelsize = 16)
+#plt.xlabel('$Im(\Psi_0)$', fontsize = 18)
+#plt.ylabel('$\pi_e[Im(\Psi_0)]$', fontsize = 18)
+#plt.xlim([-1.00, 1.00])
+#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_distribution_imag.png')
 
 
 # Plot phase of wave field
 
-plt.figure(56)
-plt.hist2d(phase_collect, phase_collect, bins = 500, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$\phi_0$', fontsize = 18)
-plt.ylabel('$\pi_e(\phi_0)$', fontsize = 18)
-plt.xlim([0.00, 2.00])
-plt.ylim([0.00, 2.00])
-cbar.ax.set_ylabel('$\pi_p[\phi_0] [\pi]$')
-plt.savefig('/your-installation-path/fig_distribution_phase.png')
+#plt.figure(56)
+#plt.hist2d(phase_collect, phase_collect, bins = 500, normed = True)
+#plt.tick_params(axis='both', which='major', labelsize = 16)
+#plt.xlabel('$\phi_0$', fontsize = 18)
+#plt.ylabel('$\pi_e(\phi_0)$', fontsize = 18)
+#plt.xlim([0.00, 2.00])
+#plt.ylim([0.00, 2.00])
+#cbar.ax.set_ylabel('$\pi_p[\phi_0] [\pi]$')
+#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_distribution_phase.png')
 
 
 # Chemical potential of the condensate
 
-plt.figure(57)
-plt.hist2d(mu_chemical_x, mu_chemical_y, bins = 200, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$Re(\mu_0)$', fontsize = 18)
-plt.ylabel('$Im(\mu_0)$', fontsize = 18)
-cbar.ax.set_ylabel('$\pi_e[Re(\mu_0),Im(\mu_0)]$')
-plt.colorbar()
-plt.savefig('/your-installation-path/fig_distribution_chemical.png')
+#plt.figure(57)
+#plt.hist2d(mu_chemical_x, mu_chemical_y, bins = 200, normed = True)
+#plt.tick_params(axis='both', which='major', labelsize = 16)
+#plt.xlabel('$Re(\mu_0)$', fontsize = 18)
+#plt.ylabel('$Im(\mu_0)$', fontsize = 18)
+#cbar.ax.set_ylabel('$\pi_e[Re(\mu_0),Im(\mu_0)]$')
+#plt.colorbar()
+#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_distribution_chemical.png')

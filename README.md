@@ -7,7 +7,7 @@
   
    This software version corresponds to publication of Fluctuation and Noise Letters, Vol. 16, No. 01, 1750009 (2017). 
 
-   The Python routine bec_symmytry_breaking.py calculates :
+   The Python routine bec_symmytry_breaking.py is compatible with Python 2 or Python 3 (for Version 3, some parts have to be changed) and calculates :
 
    1. Condensate field modes   	    	            	    	            	    	        
    2. Condensate wave fields at equilibrium (symmetry aspects)    
@@ -33,14 +33,14 @@
    
    > python bec_symmytry_breaking.py 
    
-   using Python Version 3.7., or higher. <br>
+   using Python Version 2 or Version 3 (for Version 3, some parts in the code must be changed). <br>
 
    The source code is granted with MIT LICENSE (Copyright, 2017) : 
    
    -1- : 
  
    License Copyright :  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren <br>
-   License Type :      MIT License (2017) <br>
+   License Type :       MIT License (2017) <br>
    License Contact :    E-Mail : alexej.schelle@gmail.com <br>
 
    -2- : 

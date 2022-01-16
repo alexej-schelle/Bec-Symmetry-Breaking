@@ -63,15 +63,15 @@ import matplotlib.pyplot as plt
 import operator
 
 
-maxmode = 100 # Typical mode size for analysis : 50 - 500 modes.
+maxmode = 50 # Typical mode size for analysis : 50 - 500 modes.
 ptn = 2000 # Typical particle number : 10^3 - 10^5
-sample = 100000 # Typical sample size : 10^5 - 10^8
+sample = 10000 # Typical sample size : 10^5 - 10^8
 
 omx = 2.0*math.pi*25.0 # Trap frequency in x direction
 omy = 2.0*math.pi*75.0 # Trap frequency in y direction 
 omz = 2.0*math.pi*125.0 # Trap frequency in z direction
 
-start_temp = 10.0 # in units of nK
+start_temp = 5.0 # in units of nK
 
 rhbkb = 7.63822291E-3 # in units of nK
 norm = 0.0
@@ -79,12 +79,12 @@ int_norm = 0
 drop = 0
 prob = 0.0
 phase_0 = 0.0
-z_start = 0.0
+z_start = 5.0
 mu_start = 0.0
 mu_k = 0.0
 
-print 'Trap depth [nK]: ', maxmode*omz*rhbkb # around few muK
-print 'Critical temperature [nK]: ',  rhbkb*pow(ptn,1.0/3.0)*pow(omx*omy*omz,1.0/3.0)/pow(1.202,1.0/3.0) # around 1.15 mK
+print ('Trap depth [nK]: '), maxmode*omz*rhbkb # around few muK
+print ('Critical temperature [nK]: '), rhbkb*pow(ptn,1.0/3.0)*pow(omx*omy*omz,1.0/3.0)/pow(1.202,1.0/3.0) # around 1.15 mK
 
 en_x = ['']*maxmode
 en_y = ['']*maxmode
@@ -122,7 +122,7 @@ for l in range(1, sample):
     mu = 0.0
     norm = 0.0
     
-    print 'Sample step Nr. ' + str(l)
+    print('Sample step Nr. ') + str(l)
                   
     for k in range(1, maxmode):
         
@@ -144,26 +144,26 @@ for l in range(1, sample):
     p = ['']*maxmode
     phase_0 = 0.0
    
-     x = numpy.roots(pols) # Complex roots of the number conserving equation
-    
+    x = numpy.roots(pols) # Complex roots of the number conserving equation
+
     for k in range(0,len(x)):
 
         p[k] = random.uniform(0.0,1.0)   # Random amplitudes - set p[k] = delta(k-k_random) for single BEC spectrum
         norm = norm + p[k]*p[k]*(x[k].real**2+x[k].imag**2) # Total norm
-    
+       
     norm = math.sqrt(norm)
     
     for k in range(0,len(x)): # Calculate phase of the condensate wave field
         	
         p[k] = p[k]/norm # Random amplitudes
     	
-    	if (operator.gt(x[k].real**2 + x[k].imag**2,0.0)):
+        if (operator.gt(x[k].real**2 + x[k].imag**2,0.0)):
                 
             if (operator.gt(x[k].real,0.0)):
             
                 phase_0 = math.atan(x[k].imag/x[k].real)
         
-	    if (operator.iand(operator.lt(x[k].real,0.0),operator.ge(x[k].imag,0.0))):
+            if (operator.iand(operator.lt(x[k].real,0.0),operator.ge(x[k].imag,0.0))):
             
                 phase_0 = math.atan(x[k].imag/x[k].real) + math.pi
     
@@ -171,42 +171,42 @@ for l in range(1, sample):
 	            
                 phase_0 = math.atan(x[k].imag/x[k].real) - math.pi
     
-	    if (operator.iand(operator.eq(x[k].real,0.0),operator.gt(x[k].imag,0.0))):
+            if (operator.iand(operator.eq(x[k].real,0.0),operator.gt(x[k].imag,0.0))):
             
                 phase_0 = 0.5*math.pi
 
-	    if (operator.iand(operator.eq(x[k].real,0.0),operator.lt(x[k].imag,0.0))):
+            if (operator.iand(operator.eq(x[k].real,0.0),operator.lt(x[k].imag,0.0))):
             
                 phase_0 = -0.5*math.pi
         	       
-    	mu += x[k]*p[k] # Random amplitudes times phases
-    	mu_k = x[k]*p[k] # Condensate field modes
+            mu += x[k]*p[k] # Random amplitudes times phases
+            mu_k = x[k]*p[k] # Condensate field modes
 
-    	mu_x_prop_collect.append(-1.0*mu.real) # Collect condensate field propogation in ascending mode direction
-        mu_y_prop_collect.append(-1.0*mu.imag) # Collect condensate field propagation in ascending mode direction
+            mu_x_prop_collect.append(1.0*mu.real) # Collect condensate field propogation in ascending mode direction
+            mu_y_prop_collect.append(1.0*mu.imag) # Collect condensate field propagation in ascending mode direction
     	
-        mu_x_collect.append(-1.0*mu_k.real) # Collect condensate field modes in x direction
-        mu_y_collect.append(-1.0*mu_k.imag) # Collect condensate field modes in y direction
+            mu_x_collect.append(1.0*mu_k.real) # Collect condensate field modes in x direction
+            mu_y_collect.append(1.0*mu_k.imag) # Collect condensate field modes in y direction
     	
-    	mu_chemical_x.append(x[k].real) # Collect condensate chemical potential - real parts
-        mu_chemical_y.append(x[k].imag) # Collect condensate chemical potential - imaginary parts
+            mu_chemical_x.append(x[k].real) # Collect condensate chemical potential - real parts
+            mu_chemical_y.append(x[k].imag) # Collect condensate chemical potential - imaginary parts
         
-    	if operator.ne(phase_0,0.0):
+            if operator.ne(phase_0,0.0):
     	
-    	   prob += complex(0.5*p[k]*p[k]*math.log(math.fabs(x[k].real**2 + x[k].imag**2)), p[k]*p[k]*phase_0) # Calculate transition probability
+                prob += complex(0.5*p[k]*p[k]*math.log(math.fabs(x[k].real**2 + x[k].imag**2)), p[k]*p[k]*phase_0) # Calculate transition probability
     	
-    	prob = math.sqrt(prob.real**2 + prob.imag**2) 
+            prob = math.sqrt(prob.real**2 + prob.imag**2) 
     	
     if (operator.gt(min((math.exp(prob))/(math.exp(mu_start)),1.00),random.uniform(0.00,1.00))): # Condition for transition to another state at equilibrium
  
-	   mu_start = prob
-	   z_start = z
-	   drop = 0
-	
+        mu_start = prob
+        z_start = z
+        drop = 0
+	    
     if (operator.ne(drop,1)):	
 		
-        mu_x.append(-1.0*mu.real) # Collect condensate field modes in x direction
-        mu_y.append(-1.0*mu.imag) # Collect condensate field modes in y direction
+        mu_x.append(1.0*mu.real) # Collect condensate field modes in x direction
+        mu_y.append(1.0*mu.imag) # Collect condensate field modes in y direction
             							    							    							    							
         if (operator.gt(mu.real,0.0)): # First quarter plane
             
@@ -230,32 +230,34 @@ for l in range(1, sample):
 
         if (operator.iand(operator.eq(mu.real,0.0),operator.lt(mu.imag,0.0))): # Fifth quartr plane
             
-    	   phase_0 = -0.5*math.pi + math.pi
-    	   phase_collect.append(phase_0/math.pi)
+            phase_0 = -0.5*math.pi + math.pi
+            phase_collect.append(phase_0/math.pi)
     	    	        
 
 # Plot condensate field modes   	    	            	    	            	    	        
 
 #plt.figure(51)
-#plt.hist2d(mu_x_collect, mu_y_collect, bins = 500, normed = True)
-#plt.tick_params(axis='both', which='major', labelsize = 16)
-#plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
-#plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
-#cbar = plt.colorbar()
-#cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
-#plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_field_modes.png')
-
-
-# Plot condensate wave field at equilibrium    
-
-plt.figure(52)
-plt.hist2d(mu_x, mu_y, bins = 500, normed = True)
+plt.hist2d(mu_x_collect, mu_y_collect, bins = 500, normed = True)
 plt.tick_params(axis='both', which='major', labelsize = 16)
 plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
 plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
 cbar = plt.colorbar()
 cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
-plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_symmetry_breaking_github/fig_field_thermal.png')
+plt.savefig('/Users/AS_Scientific_Analytics/Desktop/Journal_of_Physics/bec_symmetry_breaking_github/fig_field_modes.png')
+
+
+# Plot condensate wave field at equilibrium    
+
+# plt.figure(1)
+# plt.hist2d(mu_x, mu_y, bins = 300, normed = True)
+# plt.tick_params(axis='both', which='major', labelsize = 16)
+# plt.xlabel('$Re(\Psi_0)$', fontsize = 18)
+# plt.ylabel('$Im(\Psi_0)$', fontsize = 18)
+# cbar = plt.colorbar()
+# cbar.ax.set_ylabel('$\pi_e[Re(\Psi_0),Im(\Psi_0))]$')
+# plt.xlim([-1.00, 1.00])
+# plt.ylim([-1.00, 1.00])
+# plt.savefig('/Users/AS_Scientific_Analytics/Desktop/Journal_of_Physics/bec_symmetry_breaking/fig_field_thermal.png')
 
 # Plot non-condensate wave field propagation    
 

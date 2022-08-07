@@ -5,7 +5,7 @@
    
    For proper installation, please replace the path /your-installation-path/ with your installation path in the lines 235 - 316 of this code.
   
-   This software version corresponds to publication of Fluctuation and Noise Letters, Vol. 16, No. 01, 1750009 (2017). 
+   This software version corresponds to the publication Fluctuation and Noise Letters, Vol. 16, No. 01, 1750009 (2017). 
 
    The Python routine bec_symmytry_breaking.py is compatible with Python 2 or Python 3 (for Version 3, some parts have to be changed) and calculates :
 

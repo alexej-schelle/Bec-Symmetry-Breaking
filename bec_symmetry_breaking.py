@@ -139,7 +139,7 @@ for l in range(1, sample):
     
         pols[k-1] = pols_x[maxmode-k]*pols_y[maxmode-k]*pols_z[maxmode-k]-1.0 # General poles
     
-    pols[maxmode-1] = -(ptn-z_start)
+    pols[maxmode-1] = -(ptn-z_start) # Remark: the variables z_start and z corresponds to the number of condensate particles
     
     prob = complex(0.0,0.0)
     p = ['']*maxmode

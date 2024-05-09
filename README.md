@@ -39,7 +39,7 @@
    
    -1- : 
  
-   License Copyright :  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren <br>
+   License Copyright :  Dr. A. Schelle, Bachschmidstr. 4, 87600 Kaufbeuren <br>
    License Type :       MIT License (2017) <br>
    License Contact :    E-Mail : alexej.schelle@gmail.com <br>
 

@@ -1,5 +1,6 @@
+# Spontaneous symmetry breaking in a Bose-Einstein condensate
 
-   The routine bec-symmetry-breaking.py is a Markov sampling method, more specific, a (generalised) Metropolis sampling algorithm for calculating the
+   The routine BecSymmetryBreaking.py is a Markov sampling method, more specific, a (generalized) Metropolis sampling algorithm for calculating the
    integrated (random) condensate wave field (order parameter) for a given total particle number, 
    temperature and trap frequency of a Bose-Einstein condensate.
    

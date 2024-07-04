@@ -8,7 +8,7 @@
   
    This software version corresponds to the publication Fluctuation and Noise Letters, Vol. 16, No. 01, 1750009 (2017). 
 
-   The Python routine bec_symmytry_breaking.py is compatible with Python 2 or Python 3 (for Version 3, some parts have to be changed) and calculates :
+   The Python routine BecSymmytryBreaking.py is compatible with Python 2 or Python 3 (for Version 3, some parts have to be changed) and calculates :
 
    1. Condensate field modes   	    	            	    	            	    	        
    2. Condensate wave fields at equilibrium (symmetry aspects)    
@@ -18,7 +18,7 @@
    6. Total phases of the condensate wave field
    7. Chemical potentials of the condensate 
     
-   In order to start bec_symmytry_breaking.py, please specify BEC parameters :
+   In order to start BecSymmytryBreaking.py, please specify BEC parameters :
    
    maxmode # typical mode size for analysis : 50 - 500 modes # <br>
    ptn # typical particle number : 10^3 - 10^5 # <br>
